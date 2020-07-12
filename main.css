@@ -1,0 +1,488 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #f3fc62;
+  --tertiary-color: #17282f;
+  --quaternary-color: #7f9fa0;
+}
+
+/*Sections:
+- Header w/ Navbar
+- main-homepage
+- section -work
+- section -skills
+- section -about
+- section -contact
+*/
+
+body {
+  display: grid;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  grid-template-rows: 100vh 100vh 150vh 100vh 75vh 25vh;
+  grid-template-columns: repeat(1, 100vw);
+  grid-template-areas:
+    "home"
+    "work"
+    "skills"
+    "about"
+    "contact"
+    "footer";
+}
+
+#showcase,
+#home {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  grid-area: home;
+}
+/* HEADER & NAV SECTION */
+.nav-container {
+  background: none;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 300;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+
+  padding-top: 25px;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+nav a::after {
+  display: block;
+  content: "";
+  height: 4px;
+  background-color: var(--secondary-color);
+  bottom: -15px;
+  position: absolute;
+  width: 0%;
+  transition: all ease-in-out 200ms;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+/* Main - Homepage */
+
+main {
+  position: relative;
+  background-color: none;
+  z-index: -2;
+  height: 100vh;
+  background-image: url(../img/BlueMountains.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main::before {
+  position: absolute;
+  display: grid;
+  grid-area: main-home;
+  box-sizing: border-box;
+  content: "";
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  box-sizing: content-box;
+  z-index: -1;
+  width: 700px;
+  max-height: 250px;
+  left: calc(50vw - 350px);
+  top: calc(45vh - 125px);
+}
+
+.hero-cross-top {
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  border-top: 3px solid var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+}
+
+.hero-cross-bottom {
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  border-bottom: 3px solid var(--primary-color);
+  border-right: 3px solid var(--primary-color);
+}
+
+.hero-text {
+  color: var(--primary-color);
+  font-size: 100px;
+  white-space: nowrap;
+  width: fit-content;
+  margin: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  font-weight: 400;
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.hero-text-description {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 300;
+  margin: auto;
+  width: fit-content;
+}
+.arrow-div {
+  position: absolute;
+  box-sizing: content-box;
+  left: calc(50vw - 20px);
+  top: 90vh;
+  z-index: 7;
+}
+
+#scroll-arrow {
+  color: var(--primary-color);
+}
+
+/* Work Page */
+
+#work {
+  display: grid;
+  grid-area: work;
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  background: url(../img/my-work-bg-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  grid-gap: 20px;
+  grid-template-rows: 0.75fr 1.5fr 1.5fr 0.75fr;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.work-section-title {
+  display: grid;
+  grid-column: 4 / 6;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 70px;
+  margin: 60px auto;
+  font-weight: 400;
+}
+.card {
+  background: var(--quaternary-color);
+  color: var(--tertiary-color);
+  margin: 0;
+}
+.project-description {
+  display: block;
+  flex-direction: row;
+  width: 100%;
+}
+
+.project-name {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.info-text {
+  font-size: 10px;
+  display: block;
+  text-align: center;
+}
+
+.project-1 {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+.project-2 {
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+}
+.project-3 {
+  grid-row: 2 / 3;
+  grid-column: 5 / 6;
+}
+.project-4 {
+  grid-row: 2 / 3;
+  grid-column: 6 / 7;
+}
+.project-5 {
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+.project-6 {
+  grid-row: 3 / 4;
+  grid-column: 4 / 5;
+}
+.project-7 {
+  grid-row: 3 / 4;
+  grid-column: 5 / 6;
+}
+.project-8 {
+  grid-row: 3 / 4;
+  grid-column: 6 / 7;
+}
+
+/* Skills Page */
+
+#skills {
+  display: grid;
+  grid-area: skills;
+  background: #17282f;
+  background-image: url(../img/skills-bg-image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150vh;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr 2fr 0.5fr 0.5fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+    ".. skills-heading .."
+    ".. general .."
+    ".. design .."
+    ".. engineering .."
+    ".. certs-heading .."
+    ".. certs .."
+    ".. resume .."
+    ".. .. ..";
+}
+.skills-section-title {
+  grid-area: skills-heading;
+  display: block;
+  margin: auto;
+}
+.skills-section-title h2 {
+  margin: 45px auto;
+}
+.general {
+  grid-area: general;
+}
+.skill-pill {
+  background: var(--primary-color);
+  display: inline-block;
+  color: var(--tertiary-color);
+  font-size: 17px;
+  font-weight: 400;
+  padding: 17px 25px;
+  border-radius: 22px;
+  margin: 11px;
+  -webkit-box-shadow: 3px 3px 3px #000000;
+  -moz-box-shadow: 3px 3px 3px #000000;
+  box-shadow: 3px 3px 3px #000000;
+}
+i {
+  display: inline-block;
+}
+h4 {
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.skills-cat {
+  display: block;
+  text-align: center;
+}
+.skill-title-general {
+  margin-top: 20px;
+}
+.design {
+  grid-area: design;
+}
+.engineering {
+  grid-area: engineering;
+}
+.certs-header {
+  display: block;
+  text-align: center;
+  grid-area: certs-heading;
+}
+
+.canvas-container {
+  display: block;
+  grid-area: certs;
+  position: relative;
+  background: var(--quaternary-color);
+  height: 400px;
+  width: 600px;
+  border: none;
+  margin: auto;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+#canvas {
+  position: relative;
+  height: 370px;
+  width: 500px;
+  margin: auto;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: none;
+  opacity: 0.8;
+  color: #000;
+}
+
+.image {
+  width: 35px;
+  height: 35px;
+}
+
+.arrow:hover {
+  background-color: green;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 3%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.canvas-slide {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+.canvas-slide-fadeinright {
+  animation-name: fadeInRight;
+}
+.canvas-slide-fadeinleft {
+  animation-name: fadeInLeft;
+}
+.run-animation {
+  position: relative;
+  animation: fadeIn 0.45s ease-in-out;
+}
+.sliders ul {
+  position: absolute;
+  bottom: 7%;
+  left: -5%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.sliders li {
+  list-style: none;
+  background: gray;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+.active-slider {
+  background-color: #f3fc62 !important;
+  border: 2px solid var(--tertiary-color);
+}
+.resume-download {
+  grid-area: resume;
+  display: block;
+  margin: 10px auto;
+}
+.btn {
+  background: var(--secondary-color);
+  height: auto;
+  width: fit-content;
+  padding: 10px;
+}
+
+/* About me Page */
+#about {
+  grid-area: about;
+  background: #24393e;
+  height: 100%;
+  display: grid;
+  background-size: cover;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 10% 40% 10% 40%;
+  grid-template-areas:
+    ".. about-header .."
+    ".. about-description .."
+    ".. resume-button .."
+    ".. image ..";
+}
+
+/* Contact Page */
+#contact {
+  grid-area: contact;
+  background: orange;
+  height: 100%;
+}
