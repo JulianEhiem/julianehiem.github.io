@@ -20,7 +20,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1;
-  grid-template-rows: 100vh 100vh 150vh 100vh 75vh 25vh;
+  grid-template-rows: 100vh 100vh 150vh 70vh 100vh auto;
   grid-template-columns: repeat(1, 100vw);
   grid-template-areas:
     "home"
@@ -467,22 +467,156 @@ footer {
   background: #24393e;
   height: 100%;
   display: grid;
-  background-size: cover;
-  background-position-x: 0;
-  background-position-y: 0;
-  background-repeat: no-repeat;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 10% 40% 10% 40%;
+  grid-template-rows: 20% 30% 40% 10%;
   grid-template-areas:
     ".. about-header .."
+    ".. about-image .."
     ".. about-description .."
-    ".. resume-button .."
-    ".. image ..";
+    ".. .. ..";
+}
+
+.about-section-title {
+  grid-area: about-header;
+  display: block;
+  margin: auto;
+}
+.image-me {
+  grid-area: about-image;
+  width: 200px;
+  height: 200px;
+  background-color: bisque;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  margin: auto;
+}
+.about-me-text {
+  grid-area: about-description;
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  text-align: center;
+  line-height: 1.6em;
 }
 
 /* Contact Page */
 #contact {
   grid-area: contact;
-  background: orange;
+  background: var(--tertiary-color);
+  height: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 20% 60% 10% 10%;
+  grid-template-areas:
+    ".. contact-header .."
+    ".. form-group .."
+    ".. social-links .."
+    ".. .. ..";
+}
+
+.contact-section-title {
+  grid-area: contact-header;
+  display: block;
+  margin: auto;
+}
+.contact-form {
+  grid-area: form-group;
+  display: inline-block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 40px;
+}
+.contact-form > label {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+.contact-form * {
+  margin: 15px 0px;
+  width: 100%;
+  height: 2em;
+}
+#message-field {
+  height: 150px;
+}
+#send-button {
+  display: block;
+  font-size: 18px;
+  padding: 7px;
+  width: 100px;
+  height: auto;
+  background-color: var(--secondary-color);
+  border-radius: 6px;
+  margin: 20px auto;
+}
+.contact-section-title {
+  grid-area: contact-header;
+}
+.social-links {
+  grid-area: social-links;
+  display: flex;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin: 10px;
+  transition: 1s;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 1s;
+  text-align: center;
+}
+
+.social-btn:hover {
+  width: 170px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 15px 3px 15px 10px;
+  width: max-content;
+  white-space: nowrap;
+}
+
+#linkedin {
+  fill: #0e76a8;
+  padding-left: 5px;
+}
+
+#github {
+  fill: #333;
+}
+
+/* Footer */
+
+footer {
+  grid-area: footer;
+  margin: 0px auto 0px auto;
+  padding: 5px auto 10px auto;
+  background: var(--quaternary-color);
+  width: 100%;
   height: 100%;
 }
