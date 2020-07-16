@@ -20,7 +20,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1;
-  grid-template-rows: 100vh auto 150vh 70vh 100vh auto;
+  grid-template-rows: 100vh auto 150vh 100vh 150vh 12vh;
   grid-template-columns: 100vw;
   grid-template-areas:
     "home"
@@ -288,8 +288,8 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   height: 150vh;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr 2fr 0.5fr 0.5fr;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 0.4fr auto auto auto auto auto auto 20px;
+  grid-template-columns: minmax(30px, 300px) auto minmax(30px, 300px);
   grid-template-areas:
     ".. skills-heading .."
     ".. general .."
@@ -325,7 +325,8 @@ h2 {
   box-shadow: 3px 3px 3px #000000;
 }
 i {
-  display: inline-block;
+  display: block;
+  margin: auto;
 }
 h4 {
   color: var(--secondary-color);
@@ -359,7 +360,7 @@ h4 {
   position: relative;
   background: var(--quaternary-color);
   height: 400px;
-  width: 600px;
+  width: 550px;
   border: none;
   margin: auto;
   box-sizing: content-box;
@@ -382,6 +383,7 @@ h4 {
 
 .arrow {
   position: relative;
+  display: block;
   z-index: 1;
   width: 50px;
   height: 50px;
@@ -391,6 +393,11 @@ h4 {
   opacity: 0.8;
   color: #000;
 }
+.arrow i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .image {
   width: 35px;
@@ -398,7 +405,7 @@ h4 {
 }
 
 .arrow:hover {
-  background-color: green;
+  color: var(--secondary-color);
 }
 
 footer {
@@ -455,9 +462,12 @@ footer {
   grid-area: resume;
   display: block;
   margin: 10px auto;
+  text-align: center;
 }
 .btn {
   background: var(--secondary-color);
+  display: block;
+  margin: 30px;
   height: auto;
   width: fit-content;
   padding: 10px;
@@ -467,15 +477,16 @@ footer {
 #about {
   grid-area: about;
   background: #24393e;
+  box-sizing: content-box;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 20% 30% 40% 10%;
+  grid-template-columns: minmax(30px, 300px) auto minmax(30px, 300px);
+  grid-template-rows: 1fr 1fr auto 1fr;
   grid-template-areas:
     ".. about-header .."
     ".. about-image .."
     ".. about-description .."
-    ".. .. ..";
+    ".. empty ..";
 }
 
 .about-section-title {
@@ -625,7 +636,7 @@ footer {
 
 /* Media Queries */
 /* Small Screens */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .nav-container {
     background: none;
     width: 100%;
@@ -769,6 +780,177 @@ footer {
     top: 90vh;
     opacity: 0.5;
     z-index: 7;
+  }
+  /*Skills Page*/
+  h2 {
+    color: var(--primary-color);
+    font-size: 30px;
+    margin: 40px auto;
+    font-weight: 400;
+  }
+
+  .skills-section-title {
+    grid-area: skills-heading;
+    display: block;
+    margin: auto;
+  }
+  .skills-section-title h2 {
+    margin: 45px auto;
+  }
+  .general {
+    grid-area: general;
+  }
+  .skill-pill {
+    background: var(--primary-color);
+    display: inline-block;
+    color: var(--tertiary-color);
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 18px;
+    border-radius: 22px;
+    margin: 2px;
+    -webkit-box-shadow: 3px 3px 3px #000000;
+    -moz-box-shadow: 3px 3px 3px #000000;
+    box-shadow: 3px 3px 3px #000000;
+  }
+  i {
+    display: inline-block;
+  }
+  h4 {
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  .skills-cat {
+    display: block;
+    text-align: center;
+  }
+  .skill-title-general {
+    margin-top: 10px;
+  }
+  .design {
+    grid-area: design;
+  }
+  .engineering {
+    grid-area: engineering;
+  }
+  .certs-header {
+    display: block;
+    text-align: center;
+    grid-area: certs-heading;
+  }
+
+  .canvas-container {
+    display: block;
+    grid-area: certs;
+    position: relative;
+    background: var(--quaternary-color);
+    height: 160px;
+    width: 260px;
+    border: none;
+    margin: auto;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  #canvas {
+    position: relative;
+    height: 155px;
+    width: 250px;
+    margin: auto;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arrow {
+    position: relative;
+    display: block;
+    z-index: 1;
+    width: 50px;
+    height: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    background: none;
+    opacity: 0.8;
+    color: #000;
+  }
+
+  .image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .arrow:hover {
+    color: var(--secondary-color);
+  }
+
+  footer {
+    margin-top: 50px;
+    text-align: center;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 3%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .canvas-slide {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  .canvas-slide-fadeinright {
+    animation-name: fadeInRight;
+  }
+  .canvas-slide-fadeinleft {
+    animation-name: fadeInLeft;
+  }
+  .run-animation {
+    position: relative;
+    animation: fadeIn 0.45s ease-in-out;
+  }
+  .sliders ul {
+    position: absolute;
+    bottom: 8%;
+    left: -15%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .sliders li {
+    list-style: none;
+    background: gray;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .active-slider {
+    background-color: #f3fc62 !important;
+    border: 2px solid var(--tertiary-color);
+  }
+  .resume-download {
+    grid-area: resume;
+    display: block;
+    margin-top: 15px;
+  }
+  .btn {
+    background: var(--secondary-color);
+    height: auto;
+    width: fit-content;
+    padding: 10px;
   }
 }
 /* Medium Screens */
@@ -936,6 +1118,20 @@ footer {
     left: calc(50vw - 20px);
     top: 90vh;
     z-index: 7;
+  }
+  /*Skills Page*/
+  .skill-pill {
+    background: var(--primary-color);
+    display: inline-block;
+    color: var(--tertiary-color);
+    font-size: 17px;
+    font-weight: 400;
+    padding: 17px 25px;
+    border-radius: 22px;
+    margin: 11px;
+    -webkit-box-shadow: 3px 3px 3px #000000;
+    -moz-box-shadow: 3px 3px 3px #000000;
+    box-shadow: 3px 3px 3px #000000;
   }
 }
 /* Large Screens */
