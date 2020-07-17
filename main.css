@@ -5,6 +5,11 @@
   --quaternary-color: #7f9fa0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 /*Sections:
 - Header w/ Navbar
 - main-homepage
@@ -20,7 +25,10 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1;
-  grid-template-rows: 100vh auto 150vh 100vh 150vh 12vh;
+  position: relative;
+  height: 100%;
+  width: fit-content;
+  grid-template-rows: 100vh auto 150vh 100vh 120vh;
   grid-template-columns: 100vw;
   grid-template-areas:
     "home"
@@ -211,6 +219,7 @@ main::before {
 
 #work {
   grid-area: work;
+  position: relative;
   display: grid;
   background: var(--tertiary-color);
   color: var(--primary-color);
@@ -281,6 +290,7 @@ h2 {
 
 #skills {
   display: grid;
+  position: relative;
   grid-area: skills;
   background: #17282f;
   background-image: url(../img/skills-bg-image.png);
@@ -476,12 +486,13 @@ footer {
 /* About me Page */
 #about {
   grid-area: about;
+  position: relative;
   background: #24393e;
   box-sizing: content-box;
   height: 100%;
   display: grid;
   grid-template-columns: minmax(30px, 300px) auto minmax(30px, 300px);
-  grid-template-rows: 1fr 1fr auto 1fr;
+  grid-template-rows: 1fr 1fr minmax(200px, 4fr) 1fr;
   grid-template-areas:
     ".. about-header .."
     ".. about-image .."
@@ -506,11 +517,13 @@ footer {
 }
 .about-me-text {
   grid-area: about-description;
+  display: block;
   color: white;
   padding: 10px;
   margin: 15px;
   text-align: center;
   line-height: 1.6em;
+  overflow-y: hidden;
 }
 
 /* Contact Page */
@@ -625,14 +638,20 @@ footer {
 
 /* Footer */
 
-footer {
-  grid-area: footer;
+/*footer {
+  position: relative;
+  /*grid-area: footer;
+  display: grid;
   margin: 0px auto 0px auto;
-  padding: 5px auto 10px auto;
+  padding: 0px auto 10px auto;
   background: var(--quaternary-color);
   width: 100%;
   height: 100%;
 }
+footer h3 {
+  margin-top: 0px;
+}
+*/
 
 /* Media Queries */
 /* Small Screens */
@@ -686,7 +705,7 @@ footer {
     display: block;
     font-size: 10px;
     margin-left: none;
-    padding-top: 10px;
+    padding-top: 15px;
     position: relative;
   }
   .li-home {
@@ -734,7 +753,7 @@ footer {
     width: 280px;
     max-height: 250px;
     left: calc(50vw - 140px);
-    top: calc(55vh - 125px);
+    top: calc(52vh - 125px);
   }
 
   .hero-cross-top {
@@ -768,7 +787,7 @@ footer {
 
   .hero-text-description {
     color: var(--primary-color);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 300;
     margin: auto;
     width: fit-content;
@@ -804,11 +823,11 @@ footer {
     background: var(--primary-color);
     display: inline-block;
     color: var(--tertiary-color);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     padding: 10px 18px;
-    border-radius: 22px;
-    margin: 2px;
+    border-radius: 8px;
+    margin: 6px;
     -webkit-box-shadow: 3px 3px 3px #000000;
     -moz-box-shadow: 3px 3px 3px #000000;
     box-shadow: 3px 3px 3px #000000;
@@ -873,7 +892,7 @@ footer {
     position: relative;
     display: block;
     z-index: 1;
-    width: 50px;
+    width: 20px;
     height: 30px;
     padding: 0;
     box-sizing: border-box;
@@ -951,6 +970,161 @@ footer {
     height: auto;
     width: fit-content;
     padding: 10px;
+    border-radius: 8px;
+  }
+  /* About me Page */
+  #about {
+    grid-area: about;
+    position: relative;
+    background: #24393e;
+    box-sizing: content-box;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(10px, 300px) minmax(280px, 310px) minmax(
+        10px,
+        300px
+      );
+    grid-template-rows: 1fr 1fr minmax(200px, 4fr) 1fr;
+    grid-template-areas:
+      ".. about-header .."
+      ".. about-image .."
+      ".. about-description .."
+      ".. empty ..";
+  }
+
+  .about-section-title {
+    grid-area: about-header;
+    display: block;
+    margin: auto;
+  }
+  .image-me {
+    grid-area: about-image;
+    width: 150px;
+    height: 150px;
+    background-color: bisque;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin: 10px auto;
+  }
+  .about-me-text {
+    grid-area: about-description;
+    display: block;
+    color: white;
+    padding: 10px 3px 3px 3px;
+    margin: 5px;
+    text-align: center;
+    line-height: 1.3em;
+    overflow-y: hidden;
+  }
+  /* Contact Page */
+  #contact {
+    grid-area: contact;
+    background: var(--tertiary-color);
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: minmax(10px, 1fr) minmax(280px, 300px) minmax(
+        10px,
+        1fr
+      );
+    grid-template-rows: 15% 70% 10% 5%;
+    grid-template-areas:
+      ".. contact-header .."
+      ".. form-group .."
+      ".. social-links .."
+      ".. .. ..";
+  }
+
+  .contact-section-title {
+    grid-area: contact-header;
+    display: block;
+    margin: auto;
+  }
+  .contact-form {
+    grid-area: form-group;
+    display: inline-block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.07);
+    height: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+  }
+  .contact-form > label {
+    font-size: 15px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+  }
+  .contact-form * {
+    margin: 10px 0px;
+    width: 98%;
+    height: 2em;
+  }
+  #message-field {
+    height: 125px;
+  }
+  #send-button {
+    display: block;
+    font-size: 12px;
+    padding: 3px;
+    width: 70px;
+    height: auto;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    margin: 20px auto;
+  }
+  .social-links {
+    grid-area: social-links;
+    display: flex;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-btn {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin: 10px;
+    transition: 1s;
+  }
+
+  .social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+  }
+
+  .social-btn:hover {
+    width: 170px;
+    border-radius: 5px;
+  }
+
+  .social-btn:hover span {
+    padding: 15px 3px 15px 10px;
+    width: max-content;
+    white-space: nowrap;
+  }
+
+  #linkedin {
+    fill: #0e76a8;
+    padding-left: 1px;
+  }
+
+  #github {
+    fill: #333;
   }
 }
 /* Medium Screens */
