@@ -1,0 +1,49 @@
+.home {
+  background: url(../../img/BlueMountains.jpg) center/cover no-repeat;
+  height: 100vh;
+}
+.hero {
+  position: absolute;
+  background: rgba($color: #000000, $alpha: 0.6);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1,
+  h3 {
+    text-align: center;
+  }
+}
+
+.hero-text {
+  margin-top: -7vh;
+  z-index: 100;
+}
+
+.hero-title::before {
+  content: "";
+  display: block;
+  width: 92%;
+  height: 15px;
+  border-top: 1px solid $white;
+  border-left: 1px solid $white;
+  margin: 0 auto;
+}
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 92%;
+  height: 15px;
+  border-bottom: 1px solid $white;
+  border-right: 1px solid $white;
+  margin: 0 auto 10px;
+}
+.hero-arrow {
+  position: absolute;
+  display: block;
+  bottom: 5vh;
+  color: $white;
+  opacity: 0.4;
+}

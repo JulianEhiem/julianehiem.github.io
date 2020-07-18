@@ -7,14 +7,14 @@
   <script src="https://kit.fontawesome.com/58c1369767.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/main.css" />
+  <link rel="stylesheet" href="/css/main.css" />
   <link rel="preload" href="img/BlueMountains.jpg" as="image">
   <title>Julian Ehiem</title>
 </head>
 
 <body>
   <!--Home-->
-  <!--Header and Nav Section-->
+  <!--Header and Nav Section
   <header id="showcase" class="homepage">
     <div class="nav-container">
       <input type="checkbox" id="nav-toggle" class="nav-toggle" checked>
@@ -30,8 +30,9 @@
       <label for="nav-toggle" class="nav-toggle-label"><span><i class="fas fa-bars fa-x "></i></span></label>
     </div>
   </header>
-
-  <main id="home" class="homepage">
+  -->
+  <!--
+    <main id="home" class="homepage">
     <div class="hero-section">
       <div class="hero-cross-top"></div>
       <h2 class="hero-text">Julian <span class="text-secondary">Ehiem</span></h2>
@@ -44,124 +45,85 @@
       <i class="fas fa-chevron-down fa-2x" id="scroll-arrow"></i>
     </div>
   </main>
+-->
+
+  <section class="home">
+    <div class="hero">
+      <div class="hero-text">
+        <div class="hero-title">
+          <h1>Julian <span>Ehiem</span></h1>
+        </div>
+        <div class="hero-title-description">
+          <h3>Front End Web Developer, UI Designer</h3>
+        </div>
+      </div>
+      <div class="hero-arrow"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </div>
+  </section>
 
   <!--Work-->
-  <section id="work">
+  <section class="work">
     <div class="work-section-title">
-      <h2 class="work-title">My <span class="text-secondary">Work</span></h2><br>
+      <h2 class="work-title">My <span>Work</span></h2><br>
     </div>
-    <div class="project-container">
-      <div class="card project-1">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
-      <div class="card project-2">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
-      <div class="card project-3">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
-      <div class="card project-4">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
-      <div class="card project-5">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
-      <div class="card project-6">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
-      <div class="card project-7">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
-      <div class="card project-8">
-        <div class="project">
-          <img src="https://source.unsplash.com/random/50x50" alt="Project Image">
-        </div>
-        <div class="project-description">
-          <div class="project-name">
-            <h3>Project Name</h3>
-          </div>
-          <div class="info-text">
-            <p class="project-info">Lorem ipsum dolor sit amet consectetur</p>
-          </div>
-        </div>
-      </div>
+    <div class="project-container projects">
+
+      <!--Project 1-->
+      <figure class="project project-1 featured">
+        <img src="https://source.unsplash.com/random/250x250" alt="Project Image">
+        <figcaption>
+          <h3 class="project-title">Project Name</h3>
+          <p class="project-desc">A short description could go here</p>
+          <a href="#" class="project-link">More Info <i class=" fas fa-arrow-right "></i></a>
+        </figcaption>
+      </figure>
+
+      <!--Project 2-->
+      <figure class="project project-2">
+        <img src="https://source.unsplash.com/random/250x250" alt="Project Image">
+        <figcaption>
+          <h3 class="project-title">Project Name</h3>
+          <p class="project-desc">A short description could go here</p>
+          <a href="#" class="project-link">More Info <i class=" fas fa-arrow-right "></i></a>
+        </figcaption>
+      </figure>
+
+      <!--Project 3-->
+      <figure class="project project-3">
+        <img src="https://source.unsplash.com/random/250x250" alt="Project Image">
+        <figcaption>
+          <h3 class="project-title">Project Name</h3>
+          <p class="project-desc">A short description could go here</p>
+          <a href="#" class="project-link">More Info <i class=" fas fa-arrow-right "></i></a>
+        </figcaption>
+      </figure>
+
+      <!--Project 4 -->
+      <figure class="project project-4">
+        <img src="https://source.unsplash.com/random/250x250" alt="Project Image">
+        <figcaption>
+          <h3 class="project-title">Project Name</h3>
+          <p class="project-desc">A short description could go here</p>
+          <a href="#" class="project-link">More Info <i class=" fas fa-arrow-right "></i></a>
+        </figcaption>
+      </figure>
+
+      <!--Project 5-->
+      <figure class="project project-5">
+        <img src="https://source.unsplash.com/random/250x250" alt="Project Image">
+        <figcaption>
+          <h3 class="project-title">Project Name</h3>
+          <p class="project-desc">A short description could go here</p>
+          <a href="#" class="project-link">More Info <i class=" fas fa-arrow-right "></i></a>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
   <!--Skills-->
-  <section id="skills">
+  <section class="skills">
     <div class="skills-section-title">
-      <h2 class="skills-title">My <span class="text-secondary">Skills</span></h2><br>
+      <h2 class="skills-title">My <span>Skills</span></h2><br>
     </div>
     <div class="general skills-cat">
       <div class="skill-area-title">
@@ -220,15 +182,15 @@
         </div>
       </div>
     </div>
-    <div class="certs-header"><span class="text-secondary">
-        <h4>Certificates</h4>
-      </span></div>
+    <div class="certs-header">
+      <h4>Certificates</h4>
+    </div>
     <div class="canvas-container">
-      <div class="arrow"><i class="fas fa-angle-left fa-3x" id="left"></i></div>
+      <div class="arrow"><i class="fas fa-angle-left fa-2x" id="left"></i></div>
 
       <div id="canvas" class="run-animation">
       </div>
-      <div class="arrow"><i class="fas fa-angle-right fa-3x" id="right"></i></div>
+      <div class="arrow"><i class="fas fa-angle-right fa-2x" id="right"></i></div>
       <div class="sliders">
         <ul class="slider-parent">
           <li class="sl0 active-slider"></li>
@@ -246,9 +208,9 @@
   </section>
 
   <!--About-->
-  <section id="about">
+  <section class="about">
     <div class="about-section-title">
-      <h2 class="about-title">About <span class="text-secondary">Me</span></h2><br>
+      <h2 class="about-title">About <span>Me</span></h2><br>
     </div>
     <div class="image-me"></div>
     <div class="about-me-text">
@@ -258,10 +220,11 @@
       est nulla itaque recusandae, a laborum. Ducimus, iure dolores. Similique reiciendis, aspernatur sit dolores
     </div>
   </section>
+
   <!--Contact-->
-  <section id="contact">
+  <section class="contact">
     <div class="contact-section-title">
-      <h2 class="contact-title">Contact <span class="text-secondary">Me</span></h2><br>
+      <h2 class="contact-title">Contact <span>Me</span></h2><br>
     </div>
     <div class="contact-form">
       <label for="name-field">Name</label>
@@ -298,7 +261,8 @@
       </div>
     </div>
   </section>
-  <script src="main.js" type="text/Javascript"></script>
+
 </body>
+<script src="main.js" type="text/Javascript"></script>
 
 </html>

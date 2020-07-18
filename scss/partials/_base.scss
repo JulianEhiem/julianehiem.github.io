@@ -1,0 +1,58 @@
+body {
+  background: $dark-blue;
+  font-family: $ff-s;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: $white;
+  line-height: 1;
+  font-size: 43px;
+  font-weight: $fw-n;
+  margin: 0;
+
+  span {
+    color: $yellow;
+  }
+}
+h2 {
+  color: $white;
+  line-height: 1;
+  font-size: 30px;
+  font-weight: $fw-n;
+  margin: 0;
+
+  span {
+    color: $yellow;
+  }
+}
+h3 {
+  color: $white;
+  line-height: 1;
+  font-size: 17px;
+  font-weight: $fw-l;
+  margin: 0;
+}
+h4 {
+  color: $yellow;
+  line-height: 1;
+  font-size: 15px;
+  font-weight: $fw-n;
+  margin: 0;
+}
+h5 {
+  color: $yellow;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: $fw-n;
+  margin: 0;
+}
+h1,
+h2,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}

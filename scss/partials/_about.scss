@@ -1,0 +1,16 @@
+.about {
+  background: #253a3e;
+  text-align: center;
+  padding: 5em 1em;
+}
+
+.image-me {
+  grid-area: about-image;
+  width: 150px;
+  height: 150px;
+  background-color: bisque;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  margin: auto;
+}

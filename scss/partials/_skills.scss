@@ -1,0 +1,134 @@
+.skills {
+  background: url(../../img/skills-r-bg-image.jpg) center/cover no-repeat;
+  text-align: center;
+  padding: 5em 1em;
+}
+.skill-pill {
+  background: $white;
+  display: inline-block;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin: 6px;
+  -webkit-box-shadow: 3px 3px 3px #000000;
+  -moz-box-shadow: 3px 3px 3px #000000;
+  box-shadow: 3px 3px 3px #000000;
+}
+.canvas-container {
+  display: block;
+  grid-area: certs;
+  position: relative;
+  background: $light-blue;
+  height: 160px;
+  width: 260px;
+  border: none;
+  margin: auto;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.sliders ul {
+  position: absolute;
+  bottom: 8%;
+  left: -15%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.sliders li {
+  list-style: none;
+  background: gray;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+.active-slider {
+  background-color: #f3fc62 !important;
+  border: 2px solid $dark-blue;
+}
+.resume-download {
+  grid-area: resume;
+  display: block;
+  margin-top: 15px;
+}
+.btn {
+  background: $yellow;
+  height: auto;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 8px;
+}
+#canvas {
+  position: relative;
+  height: 370px;
+  width: 500px;
+  margin: auto;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  position: relative;
+  display: block;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: none;
+  opacity: 0.8;
+  color: #000;
+}
+.arrow i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 35px;
+  height: 35px;
+}
+
+.arrow:hover {
+  color: var(--secondary-color);
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 3%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.canvas-slide {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+.canvas-slide-fadeinright {
+  animation-name: fadeInRight;
+}
+.canvas-slide-fadeinleft {
+  animation-name: fadeInLeft;
+}
+.run-animation {
+  position: relative;
+  animation: fadeIn 0.45s ease-in-out;
+}
