@@ -43,7 +43,7 @@ h3 {
 h4 {
   color: #f3fc62;
   line-height: 1;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   margin: 0;
 }
@@ -94,10 +94,14 @@ p {
   z-index: 100;
 }
 
+.hero-text h1 {
+  margin: 0.2em;
+}
+
 .hero-title::before {
   content: "";
   display: block;
-  width: 92%;
+  width: 80%;
   height: 15px;
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
@@ -107,11 +111,11 @@ p {
 .hero-title::after {
   content: "";
   display: block;
-  width: 92%;
+  width: 80%;
   height: 15px;
   border-bottom: 1px solid #fff;
   border-right: 1px solid #fff;
-  margin: 0 auto 10px;
+  margin: 0 auto 1em;
 }
 
 .hero-arrow {
@@ -125,20 +129,23 @@ p {
 .work {
   background: url(../../img/my-work-bg-image.jpg) center/cover no-repeat;
   text-align: center;
-  padding: 5em 0;
+  padding: 5em 1em;
 }
 
 .project {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 150px;
   position: relative;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: purple;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: #7f9fa0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 10rem;
           flex: 1 1 10rem;
@@ -149,92 +156,47 @@ p {
   width: 100%;
 }
 
-.project .project-title,
-.project .project-desc,
 .project .project-link {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.project .project-desc {
+  font-size: 14px;
+  line-height: 1.1em;
+  padding-top: 1em;
+}
+
+.project .project-title {
+  padding-top: 0.5em;
+}
+
+.project figcaption {
   margin: 0;
   padding: 0;
   display: none;
+  -webkit-transition: display ease-in-out 250ms;
+  transition: display ease-in-out 250ms;
+}
+
+.project:hover figcaption,
+.project:focus figcaption {
+  display: block;
 }
 
 .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-/*
-.project {
-  position: relative;
-  overflow: hidden;
-
-  img {
-    display: block;
-  }
-  & :after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2em;
-    background: rgba($dark-blue, 0.8);
-    color: #000;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-}
-
-.project-title {
-  color: $white;
-  font-size: 22px;
-  font-weight: $fw-n;
-  margin-bottom: auto;
-}
-.project-link {
-  color: $white;
-  font-weight: $fw-n;
-  font-size: 18px;
-  text-decoration: none;
-  border-bottom: 3px solid $white;
-  align-self: flex-start;
-}
-
-.project-desc {
-  color: $white;
-}
-
-.project-title,
-.project-desc,
-.project-link {
   margin: 0;
   padding: 0;
-  display: none;
+  max-width: 60em;
 }
 
-figure {
-  display: block;
-  margin: 0;
-  padding: 0;
-  width: fit-content;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.projects {
-  display: grid;
-
-  margin: 0;
-  padding: 0;
-}
-*/
 .skills {
   background: url(../../img/skills-r-bg-image.jpg) center/cover no-repeat;
   text-align: center;
@@ -245,28 +207,52 @@ figure {
   background: #fff;
   display: inline-block;
   color: #000;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
-  padding: 10px 18px;
+  padding: 9px 15px;
   border-radius: 8px;
   margin: 6px;
   -webkit-box-shadow: 3px 3px 3px #000000;
   box-shadow: 3px 3px 3px #000000;
 }
 
+.skill-pill i {
+  margin-right: 4px;
+}
+
+.skills-cat {
+  margin-bottom: 2em;
+}
+
+.skills-area-title {
+  margin-bottom: 0;
+}
+
+.certs-header {
+  margin-bottom: 2em;
+}
+
+.canvas-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
 .canvas-container {
-  display: block;
-  grid-area: certs;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   background: #7f9fa0;
-  height: 160px;
-  width: 260px;
+  height: 250px;
+  max-width: 400px;
   border: none;
   margin: auto;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -276,11 +262,14 @@ figure {
           align-items: center;
   margin: 0 auto;
   padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10px;
+          flex: 1 1 10px;
 }
 
 .sliders ul {
   position: absolute;
-  bottom: 8%;
+  bottom: 4%;
   left: -15%;
   width: 100%;
   text-align: center;
@@ -303,9 +292,8 @@ figure {
 }
 
 .resume-download {
-  grid-area: resume;
   display: block;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .btn {
@@ -314,17 +302,17 @@ figure {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px;
+  padding: 7px;
   border-radius: 8px;
 }
 
 #canvas {
   position: relative;
-  height: 370px;
-  width: 500px;
+  height: 190px;
+  width: 200px;
   margin: auto;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,14 +322,17 @@ figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
 }
 
 .arrow {
   position: relative;
   display: block;
   z-index: 1;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 40px;
   padding: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -444,10 +435,17 @@ footer {
   margin: auto;
 }
 
+.about-me-text {
+  margin-top: 1.5em;
+  color: #fff;
+  padding: 0.5em;
+  line-height: 1.4em;
+}
+
 .contact {
   background: #17282f;
   text-align: center;
-  padding: 5em 1em;
+  padding: 5em 1em 2em;
 }
 
 .contact-form {
@@ -462,20 +460,22 @@ footer {
   padding: 20px;
 }
 
-.contact-form label {
-  font-size: 15px;
-  color: #f3fc62;
-  margin-bottom: 10px;
-}
-
 .contact-form * {
   margin: 10px 0px;
   width: 98%;
-  height: 2em;
+  height: 1.4em;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 15px;
+  color: #f3fc62;
+  text-align: left;
+  margin: 0;
 }
 
 #message-field {
-  height: 125px;
+  height: 140px;
 }
 
 #send-button {
@@ -502,7 +502,7 @@ footer {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 2px auto;
+  margin: 1em auto;
 }
 
 .flex-center {

@@ -20,12 +20,15 @@
 .hero-text {
   margin-top: -7vh;
   z-index: 100;
+  h1 {
+    margin: 0.2em;
+  }
 }
 
 .hero-title::before {
   content: "";
   display: block;
-  width: 92%;
+  width: 80%;
   height: 15px;
   border-top: 1px solid $white;
   border-left: 1px solid $white;
@@ -34,11 +37,11 @@
 .hero-title::after {
   content: "";
   display: block;
-  width: 92%;
+  width: 80%;
   height: 15px;
   border-bottom: 1px solid $white;
   border-right: 1px solid $white;
-  margin: 0 auto 10px;
+  margin: 0 auto 1em;
 }
 .hero-arrow {
   position: absolute;
