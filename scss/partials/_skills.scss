@@ -1,7 +1,41 @@
 .skills {
   background: url(../../img/skills-r-bg-image.jpg) center/cover no-repeat;
   text-align: center;
-  padding: 5em 1em;
+  padding: 5em 2em;
+
+  @include mq-m {
+    padding: 5em 3em;
+  }
+  @include mq-l {
+    padding: 5em 18em;
+  }
+  @include mq-xl {
+    padding: 5em 22em;
+  }
+
+  h2 {
+    @include mq-m {
+      font-size: 40px;
+    }
+    @include mq-l {
+      font-size: 50px;
+    }
+    @include mq-xl {
+      font-size: 60px;
+    }
+  }
+
+  h4 {
+    @include mq-m {
+      font-size: 20px;
+    }
+    @include mq-l {
+      font-size: 27px;
+    }
+    @include mq-xl {
+      font-size: 35px;
+    }
+  }
 }
 
 .skill-pill {
@@ -10,12 +44,31 @@
   color: #000;
   font-size: 13px;
   font-weight: 400;
-  padding: 9px 15px;
-  border-radius: 8px;
-  margin: 6px;
+  padding: 7px 13px;
+  border-radius: 6px;
+  margin: 5px;
   -webkit-box-shadow: 3px 3px 3px #000000;
   -moz-box-shadow: 3px 3px 3px #000000;
   box-shadow: 3px 3px 3px #000000;
+
+  @include mq-m {
+    font-size: 15px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    margin: 7px;
+  }
+  @include mq-l {
+    font-size: 18px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    margin: 7px;
+  }
+  @include mq-xl {
+    font-size: 21px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    margin: 7px;
+  }
 
   i {
     margin-right: 4px;
@@ -40,7 +93,7 @@
   position: relative;
   background: $light-blue;
   height: 250px;
-  max-width: 400px;
+  max-width: 100%;
   border: none;
   margin: auto;
   box-sizing: content-box;
@@ -50,11 +103,23 @@
   margin: 0 auto;
   padding: 0;
   flex: 1 1 10px;
+
+  @include mq-m {
+    max-width: 450px;
+  }
+  @include mq-l {
+    max-width: 550px;
+    height: 300px;
+  }
+  @include mq-xl {
+    max-width: 750px;
+    height: 350px;
+  }
 }
 .sliders ul {
   position: absolute;
   bottom: 4%;
-  left: -15%;
+  left: -7%;
   width: 100%;
   text-align: center;
   margin: 0;
@@ -74,14 +139,25 @@
 }
 .resume-download {
   display: block;
-  margin-top: 20px;
+  margin-top: 2em;
 }
 .btn {
   background: $yellow;
   height: auto;
+  font-size: 13px;
   width: fit-content;
-  padding: 7px;
+  padding: 9px;
   border-radius: 8px;
+
+  @include mq-m {
+    font-size: 14px;
+  }
+  @include mq-l {
+    font-size: 17px;
+  }
+  @include mq-xl {
+    font-size: 19px;
+  }
 }
 #canvas {
   position: relative;
@@ -119,7 +195,7 @@
 }
 
 .arrow:hover {
-  color: var(--secondary-color);
+  color: $yellow;
 }
 
 footer {

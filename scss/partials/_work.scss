@@ -1,14 +1,36 @@
 .work {
   background: url(../../img/my-work-bg-image.jpg) center/cover no-repeat;
   text-align: center;
-  padding: 5em 1em;
-}
+  padding: 5em 2em;
 
+  @include mq-m {
+    padding: 5em 3em;
+  }
+
+  h2 {
+    @include mq-m {
+      font-size: 40px;
+    }
+    @include mq-l {
+      font-size: 50px;
+    }
+    @include mq-xl {
+      font-size: 60px;
+    }
+  }
+}
+figure {
+  margin: 1.5em 1.8em;
+  //@include mq-m {
+  //margin: 0.2em 0.3em 0.2em;
+  //}
+}
 .project {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 450px;
   position: relative;
+  //max-height: 400px;
   height: min-content;
   background-color: $light-blue;
   flex: 1 1 10rem;
@@ -46,9 +68,31 @@
 
 .projects {
   display: flex;
-  //flex-direction: row;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  max-width: 60em;
+  @include container($max-width: 870px);
 }
+
+//.projects {
+//  display: grid;
+//  grid-gap: 0.5em;
+//  //overflow: hidden;
+//  @include container($max-width: 680px);
+//  grid-template-columns: minmax(1em, 1.5em) minmax(auto-fit, minmax(235px, 1fr)) minmax(
+//      1em,
+//      1.5em
+//    );
+//
+//  .featured {
+//    grid-column: 1 / span 3;
+//    grid-row: 1 / span 2;
+//    display: flex;
+//    width: 100%;
+//    height: fit-content;
+//    align-self: center;
+//
+//    img {
+//      display: block;
+//      width: 100%;
+//    }
+//  }
+//}

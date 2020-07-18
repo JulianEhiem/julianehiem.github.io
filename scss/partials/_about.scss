@@ -1,22 +1,71 @@
 .about {
   background: #253a3e;
   text-align: center;
-  padding: 5em 1em;
-}
+  padding: 5em 1.5em;
 
-.image-me {
-  grid-area: about-image;
-  width: 150px;
-  height: 150px;
-  background-color: bisque;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  margin: auto;
-}
-.about-me-text {
-  margin-top: 1.5em;
-  color: $white;
-  padding: 0.5em;
-  line-height: 1.4em;
+  @include mq-m {
+    padding: 5em 3em;
+  }
+
+  h2 {
+    @include mq-m {
+      font-size: 40px;
+    }
+    @include mq-l {
+      font-size: 50px;
+    }
+    @include mq-xl {
+      font-size: 60px;
+    }
+  }
+
+  .image-me {
+    grid-area: about-image;
+    width: 150px;
+    height: 150px;
+    background-color: bisque;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin: auto;
+    overflow: hidden;
+
+    @include mq-m {
+      width: 200px;
+      height: 200px;
+    }
+    @include mq-l {
+      width: 200px;
+      height: 200px;
+    }
+    @include mq-xl {
+      width: 200px;
+      height: 200px;
+    }
+
+    img {
+      display: block;
+      width: 120%;
+      margin-left: -13px;
+      margin-top: -8px;
+
+      @include mq-m {
+        margin-left: -20px;
+      }
+    }
+  }
+  .about-me-text {
+    margin: 1.5em auto 0;
+    color: $white;
+    padding: 0.5em;
+    line-height: 1.4em;
+    max-width: 500px;
+
+    @include mq-l {
+      font-size: 1.1em;
+    }
+    @include mq-xl {
+      font-size: 1.6em;
+    }
+  }
 }

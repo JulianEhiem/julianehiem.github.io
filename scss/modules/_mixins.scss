@@ -1,0 +1,21 @@
+@mixin container($width: 90%, $max-width: 50em) {
+  width: $width;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+@mixin mq-m($width: 569px, $max-width: 1024px) {
+  @media (min-width: $width) and (max-width: $max-width) {
+    @content;
+  }
+}
+@mixin mq-l($width: 1025px, $max-width: 1600px) {
+  @media (min-width: $width) and (max-width: $max-width) {
+    @content;
+  }
+}
+@mixin mq-xl($width: 1601px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
