@@ -357,7 +357,7 @@ figure {
 
 @media (min-width: 1025px) and (max-width: 1600px) {
   .skills {
-    padding: 5em 18em;
+    padding: 5em 10em;
   }
 }
 
@@ -474,7 +474,7 @@ figure {
   display: flex;
   position: relative;
   background: #7f9fa0;
-  height: 250px;
+  height: 390px;
   max-width: 100%;
   border: none;
   margin: auto;
@@ -496,21 +496,22 @@ figure {
 
 @media (min-width: 569px) and (max-width: 1024px) {
   .canvas-container {
-    max-width: 450px;
+    max-width: 550px;
+    height: 410px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
   .canvas-container {
-    max-width: 550px;
-    height: 300px;
+    max-width: 650px;
+    height: 425px;
   }
 }
 
 @media (min-width: 1601px) {
   .canvas-container {
-    max-width: 750px;
-    height: 350px;
+    max-width: 700px;
+    height: 450px;
   }
 }
 
@@ -574,7 +575,7 @@ figure {
 
 #canvas {
   position: relative;
-  height: 190px;
+  height: 400px;
   width: 200px;
   margin: auto;
   -webkit-box-sizing: border-box;
@@ -591,6 +592,12 @@ figure {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 10rem;
           flex: 1 1 10rem;
+}
+
+#canvas img {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .arrow {

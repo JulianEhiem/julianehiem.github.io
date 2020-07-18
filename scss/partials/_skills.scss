@@ -7,7 +7,7 @@
     padding: 5em 3em;
   }
   @include mq-l {
-    padding: 5em 18em;
+    padding: 5em 10em;
   }
   @include mq-xl {
     padding: 5em 22em;
@@ -92,7 +92,7 @@
   display: flex;
   position: relative;
   background: $light-blue;
-  height: 250px;
+  height: 390px;
   max-width: 100%;
   border: none;
   margin: auto;
@@ -105,15 +105,16 @@
   flex: 1 1 10px;
 
   @include mq-m {
-    max-width: 450px;
+    max-width: 550px;
+    height: 410px;
   }
   @include mq-l {
-    max-width: 550px;
-    height: 300px;
+    max-width: 650px;
+    height: 425px;
   }
   @include mq-xl {
-    max-width: 750px;
-    height: 350px;
+    max-width: 700px;
+    height: 450px;
   }
 }
 .sliders ul {
@@ -161,7 +162,7 @@
 }
 #canvas {
   position: relative;
-  height: 190px;
+  height: 400px;
   width: 200px;
   margin: auto;
   box-sizing: border-box;
@@ -169,6 +170,12 @@
   justify-content: space-between;
   align-items: center;
   flex: 1 1 10rem;
+
+  img {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 .arrow {

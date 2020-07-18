@@ -4,6 +4,7 @@
 
 ### Task List
 
+- [ ] add modal certificates fo phone screens
 - [ ] add links to social media buttons
 - [ ] change Logo
 - [x] add responsiveness
