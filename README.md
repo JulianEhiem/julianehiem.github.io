@@ -6,9 +6,9 @@
 
 - [ ] add links to social media buttons
 - [ ] change Logo
-- [ ] add responsiveness
+- [x] add responsiveness
 - [ ] update and attach resume
-- [ ] add profile picture
+- [x] add profile picture
 - [ ] create project thumbnail image
 - [ ] add page animations and transitions
 - [ ] UI/UX Design checklist
