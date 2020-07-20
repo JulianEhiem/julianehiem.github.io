@@ -447,11 +447,17 @@ figure {
   bottom: 3em;
   left: 3em;
   right: 3em;
+  z-index: 400;
   background: #7f9fa0;
   -webkit-box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.4);
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
+}
+
+.project-modal.is-open {
+  display: block;
 }
 
 .modal-close {
