@@ -9,11 +9,21 @@ portfolioContainer.addEventListener("click", (e) => {
   if (!modalToggle) return;
 
   const modal = modalToggle.parentNode.nextElementSibling;
-  const closeButton = modal.querySelector("modal-close");
+  const closeButton = modal.querySelector(".modal-close");
 
-  modal.classList.add("is-open");
+  const modalOpen = () => {
+    modal.classList.add("is-open");
+    modal.style.animation = "modalIn 500ms forwards";
+  };
+  const modalClose = () => {
+    modal.classList.remove("is-open");
+    modal.removeEventlistener("animationend", modalClose);
+  };
 
   closeButton.addEventListener("click", () => {
-    modal.classList.remove("is-open");
+    modal.style.animation = "modalOut 500ms forwards";
+    modal.addEventListener("animationend", modalClose);
   });
+
+  modalOpen();
 });
