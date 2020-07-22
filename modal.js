@@ -5,7 +5,7 @@ portfolioContainer.addEventListener("click", (e) => {
   e.preventDefault();
 
   const modalToggle = e.target.closest(".project-link");
-  //console.log(modalToggle);
+  console.log(modalToggle);
   if (!modalToggle) return;
 
   const modal = modalToggle.parentNode.nextElementSibling;
@@ -13,17 +13,13 @@ portfolioContainer.addEventListener("click", (e) => {
 
   const modalOpen = () => {
     modal.classList.add("is-open");
-    modal.style.animation = "modalIn 500ms forwards";
+    document.body.style.overflowY = "hidden";
   };
   const modalClose = () => {
     modal.classList.remove("is-open");
-    modal.removeEventlistener("animationend", modalClose);
+    document.body.style.overflowY = "scroll";
   };
-
-  closeButton.addEventListener("click", () => {
-    modal.style.animation = "modalOut 500ms forwards";
-    modal.addEventListener("animationend", modalClose);
-  });
+  closeButton.addEventListener("click", modalClose);
 
   modalOpen();
 });

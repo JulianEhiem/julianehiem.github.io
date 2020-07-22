@@ -522,42 +522,6 @@ figure {
   margin-left: 2em;
 }
 
-@-webkit-keyframes modalIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes modalIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes modalOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes modalOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .skills {
   background: url(../../img/skills-r-bg-image.jpg) center/cover no-repeat;
   text-align: center;
