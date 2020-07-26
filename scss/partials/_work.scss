@@ -2,6 +2,8 @@
   background: url(../../img/my-work-bg-image.jpg) center/cover no-repeat;
   text-align: center;
   padding: 5em 2em;
+  min-height: max-content;
+  display: block;
 
   @include mq-m {
     padding: 5em 3em;
@@ -71,6 +73,7 @@ figure {
 .projects {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
   @include container($max-width: 870px);
 }
 
@@ -190,6 +193,7 @@ figure {
     padding: 4px 5px;
     margin: 0 auto 7px;
     white-space: nowrap;
+    text-decoration: none;
 
     &:hover {
       background: $yellow;
