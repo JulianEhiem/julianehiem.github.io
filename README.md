@@ -6,6 +6,7 @@
 
 ## Up Next
 
+- [ ] Remove NavBar Container Slide for whole page
 - [ ] Change and simplify projects modal UI
 - [ ] fix project description broken links
 
