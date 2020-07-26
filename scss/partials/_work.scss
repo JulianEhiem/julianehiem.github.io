@@ -150,7 +150,7 @@ figure {
   }
 }
 // =================================================== //
-.img-div {
+.project {
   height: fit-content;
   padding: 0;
   margin: 1.5em 1.8em;
@@ -172,8 +172,8 @@ figure {
     opacity: 0.7;
   }
 
-  &:hover .test-caption,
-  &:focus .test-caption {
+  &:hover .project-caption,
+  &:focus .project-caption {
     transition: max-height ease-in-out 350ms;
     max-height: 100%;
     transform-origin: top;
@@ -197,7 +197,7 @@ figure {
     }
   }
 }
-.test-caption {
+.project-caption {
   padding: 0.1em;
   margin: 0;
   position: absolute;
@@ -207,6 +207,7 @@ figure {
   width: 100%;
   overflow: hidden;
   display: block;
+  box-sizing: border-box;
 
   .project-title {
     color: #fff;
