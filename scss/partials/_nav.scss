@@ -2,7 +2,7 @@
   .menu-button {
     position: absolute;
     top: 1.6em;
-    right: 1.6em; //here
+    right: 1.6em;
     background: transparent;
     color: rgba($white, 1);
     border: 0;
@@ -14,11 +14,11 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0; //here
-    left: 45%; //here
+    right: 0;
+    left: 45%;
     z-index: 200;
 
-    transform: translateX(200%); //here
+    transform: translateX(200%);
     transition: transform ease-out 250ms;
   }
 
@@ -64,7 +64,7 @@
     overflow-y: hidden;
 
     nav {
-      transform: translateX(0); //here ----
+      transform: translateX(0);
     }
 
     .close {
@@ -75,10 +75,10 @@
       display: none;
     }
     .container-all {
-      transform: translateX(-55%); //here ---
+      transform: translateX(-55%);
     }
     .menu-button {
-      transform: translateX(60%); //here ----
+      transform: translateX(60%);
     }
   }
 }
