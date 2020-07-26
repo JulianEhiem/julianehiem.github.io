@@ -4,6 +4,11 @@
   max-width: $max-width;
 }
 
+@mixin mq-s($max-width: 568px) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
 @mixin mq-m($width: 569px, $max-width: 1024px) {
   @media (min-width: $width) and (max-width: $max-width) {
     @content;

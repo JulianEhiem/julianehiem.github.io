@@ -117,5 +117,15 @@
   display: block;
   bottom: 5vh;
   color: $white;
-  opacity: 0.4;
+  opacity: 0.8;
+  animation: 2700ms ease-in-out 8 both running bounce;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }
