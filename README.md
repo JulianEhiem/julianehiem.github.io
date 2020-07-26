@@ -4,6 +4,13 @@
 
 ### Task List
 
+## Up Next
+
+- [ ] Change and simplify projects modal UI
+- [ ] fix project description broken links
+
+## Later
+
 - [ ] add modal certificates for phone screens
 - [ ] add links to social media buttons
 - [ ] change Logo
