@@ -82,11 +82,11 @@ figure {
   z-index: 300;
   top: 10%;
   bottom: 10%;
-  left: 20%;
-  right: 20%;
+  left: 10%;
+  right: 10%;
   z-index: 400;
   background: $light-blue;
-  box-shadow: 0 0 0 20em rgba(#000, 0.4);
+  box-shadow: 0 0 0 90em rgba(#000, 0.6);
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
@@ -98,6 +98,18 @@ figure {
   @include mq-m {
     top: 15%;
     bottom: 15%;
+    left: 20%;
+    right: 20%;
+  }
+  @include mq-l {
+    top: 15%;
+    bottom: 15%;
+    left: 25%;
+    right: 25%;
+  }
+  @include mq-xl {
+    top: 15%;
+    bottom: 15%;
     left: 25%;
     right: 25%;
   }
@@ -105,13 +117,26 @@ figure {
 .modal-close {
   background: white;
   position: fixed;
-  left: 2em;
-  top: 2em;
+  right: 8%;
+  top: 8%;
   border: 0;
   padding: 0;
   width: 2.5em;
   height: 2.5em;
   border-radius: 50%;
+
+  @include mq-m {
+    top: 13%;
+    right: 18%;
+  }
+  @include mq-l {
+    top: 13%;
+    right: 23%;
+  }
+  @include mq-xl {
+    top: 13%;
+    right: 23%;
+  }
 }
 .project-header {
   text-align: center;
