@@ -78,7 +78,7 @@
   margin-bottom: 2em;
 }
 .skills-area-title {
-  margin-bottom: 0;
+  margin: 9em auto;
 }
 .certs-header {
   margin-bottom: 2em;
@@ -91,7 +91,7 @@
 .canvas-container {
   display: flex;
   position: relative;
-  background: $light-blue;
+  background: rgba($light-blue, 0.2);
   height: 390px;
   max-width: 100%;
   border: none;

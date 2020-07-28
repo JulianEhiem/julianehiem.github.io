@@ -4,16 +4,11 @@
 
 ### Task List
 
-## Up Next
-
-- [x] Remove NavBar Container Slide for whole page
-- [ ] Change and simplify projects modal UI
 - [ ] fix project description broken links
-
-## Later
-
+- [x] Remove NavBar Container Slide for whole page
 - [ ] add modal certificates for phone screens
 - [ ] add links to social media buttons
+- [ ] Change and simplify projects modal UI
 - [ ] change Logo
 - [x] add responsiveness
 - [ ] update and attach resume

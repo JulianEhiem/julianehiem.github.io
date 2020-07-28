@@ -51,7 +51,7 @@ h3 {
 }
 
 h4 {
-  color: #f3fc62;
+  color: #fff;
   line-height: 1;
   font-size: 16px;
   font-weight: 400;
@@ -824,12 +824,19 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .project img {
   display: block;
   width: 100%;
   background-color: #000;
+}
+
+.project:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .project:hover .overlay,
@@ -843,8 +850,8 @@ figure {
 
 .project:hover .project-caption,
 .project:focus .project-caption {
-  -webkit-transition: max-height ease-in-out 350ms;
-  transition: max-height ease-in-out 350ms;
+  -webkit-transition: max-height ease-in-out 550ms;
+  transition: max-height ease-in-out 550ms;
   max-height: 100%;
   -webkit-transform-origin: top;
           transform-origin: top;
@@ -1014,7 +1021,7 @@ figure {
 }
 
 .skills-area-title {
-  margin-bottom: 0;
+  margin: 9em auto;
 }
 
 .certs-header {
@@ -1035,7 +1042,7 @@ figure {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  background: #7f9fa0;
+  background: rgba(127, 159, 160, 0.2);
   height: 390px;
   max-width: 100%;
   border: none;

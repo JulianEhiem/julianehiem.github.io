@@ -191,11 +191,16 @@ figure {
   margin: 1.5em 1.8em;
   position: relative;
   display: flex;
+  transition: all 0.2s ease-in-out;
 
   img {
     display: block;
     width: 100%;
     background-color: #000;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 
   &:hover .overlay,
@@ -209,7 +214,7 @@ figure {
 
   &:hover .project-caption,
   &:focus .project-caption {
-    transition: max-height ease-in-out 350ms;
+    transition: max-height ease-in-out 550ms;
     max-height: 100%;
     transform-origin: top;
   }
