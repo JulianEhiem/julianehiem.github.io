@@ -687,14 +687,14 @@ figure {
 .project-modal {
   position: fixed;
   z-index: 300;
-  top: 3em;
-  bottom: 3em;
-  left: 3em;
-  right: 3em;
+  top: 10%;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
   z-index: 400;
   background: #7f9fa0;
-  -webkit-box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 0 20em rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 0 20em rgba(0, 0, 0, 0.4);
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
@@ -702,6 +702,15 @@ figure {
 
 .project-modal.is-open {
   display: block;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .project-modal {
+    top: 15%;
+    bottom: 15%;
+    left: 25%;
+    right: 25%;
+  }
 }
 
 .modal-close {

@@ -80,19 +80,26 @@ figure {
 .project-modal {
   position: fixed;
   z-index: 300;
-  top: 3em;
-  bottom: 3em;
-  left: 3em;
-  right: 3em;
+  top: 10%;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
   z-index: 400;
   background: $light-blue;
-  box-shadow: 0 0 0 5em rgba(#000, 0.4);
+  box-shadow: 0 0 0 20em rgba(#000, 0.4);
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
 
   &.is-open {
     display: block;
+  }
+
+  @include mq-m {
+    top: 15%;
+    bottom: 15%;
+    left: 25%;
+    right: 25%;
   }
 }
 .modal-close {
