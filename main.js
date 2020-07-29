@@ -37,6 +37,7 @@ let slider4 = document.querySelector(".sl4");
 let slider5 = document.querySelector(".sl5");
 
 canvas.style.background = `url(${images[0]}) center no-repeat`;
+canvas.style.backgroundSize = "100% auto";
 
 let str1 = "sl";
 //add eventListeners to arrows
@@ -55,6 +56,7 @@ arrowL.addEventListener("click", function (e) {
   if (i < 0) i = images.length - 1;
 
   canvas.style.background = `url(${images[i]}) center no-repeat`;
+  canvas.style.backgroundSize = "100% auto";
   function sliderDot(pos) {
     switch (pos) {
       case 0:
@@ -203,6 +205,7 @@ arrowR.addEventListener("click", function (e) {
     i = 0;
   }
   canvas.style.background = `url(${images[i]}) center no-repeat`;
+  canvas.style.backgroundSize = "100% auto";
   function sliderDot(pos) {
     switch (pos) {
       case 0:

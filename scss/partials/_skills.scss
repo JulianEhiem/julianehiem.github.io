@@ -88,6 +88,14 @@
   width: 100%;
   align-self: center;
 }
+
+.certs-header {
+  margin: 0 auto 3em;
+
+  @include mq-s {
+    margin: 4em auto -1em;
+  }
+}
 .canvas-container {
   display: flex;
   position: relative;
@@ -103,6 +111,11 @@
   margin: 0 auto;
   padding: 0;
   flex: 1 1 10px;
+
+  @include mq-s {
+    background: rgba($light-blue, 0);
+    height: 400px;
+  }
 
   @include mq-m {
     max-width: 550px;
@@ -120,10 +133,15 @@
 .sliders ul {
   position: absolute;
   bottom: 4%;
-  left: -7%;
+  right: 0%;
   width: 100%;
   text-align: center;
   margin: 0;
+
+  @include mq-s {
+    bottom: 14%;
+    right: 0%;
+  }
 }
 .sliders li {
   list-style: none;
@@ -176,6 +194,12 @@
     width: 85%;
     margin: 0 auto;
   }
+
+  @include mq-s {
+    max-height: fit-content;
+    margin: 0 auto;
+    height: 370px;
+  }
 }
 
 .arrow {
@@ -188,7 +212,7 @@
   box-sizing: border-box;
   background: none;
   opacity: 0.8;
-  color: #000;
+  color: #fff;
 }
 .arrow i {
   display: flex;

@@ -1037,6 +1037,16 @@ figure {
       align-self: center;
 }
 
+.certs-header {
+  margin: 0 auto 3em;
+}
+
+@media (max-width: 568px) {
+  .certs-header {
+    margin: 4em auto -1em;
+  }
+}
+
 .canvas-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1063,6 +1073,13 @@ figure {
           flex: 1 1 10px;
 }
 
+@media (max-width: 568px) {
+  .canvas-container {
+    background: rgba(127, 159, 160, 0);
+    height: 400px;
+  }
+}
+
 @media (min-width: 569px) and (max-width: 1024px) {
   .canvas-container {
     max-width: 550px;
@@ -1087,10 +1104,17 @@ figure {
 .sliders ul {
   position: absolute;
   bottom: 4%;
-  left: -7%;
+  right: 0%;
   width: 100%;
   text-align: center;
   margin: 0;
+}
+
+@media (max-width: 568px) {
+  .sliders ul {
+    bottom: 14%;
+    right: 0%;
+  }
 }
 
 .sliders li {
@@ -1169,6 +1193,16 @@ figure {
   margin: 0 auto;
 }
 
+@media (max-width: 568px) {
+  #canvas {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    margin: 0 auto;
+    height: 370px;
+  }
+}
+
 .arrow {
   position: relative;
   display: block;
@@ -1180,7 +1214,7 @@ figure {
           box-sizing: border-box;
   background: none;
   opacity: 0.8;
-  color: #000;
+  color: #fff;
 }
 
 .arrow i {
