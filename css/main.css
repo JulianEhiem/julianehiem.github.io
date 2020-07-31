@@ -1170,6 +1170,7 @@ figure {
   position: relative;
   height: 400px;
   width: 200px;
+  max-width: 550px;
   margin: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

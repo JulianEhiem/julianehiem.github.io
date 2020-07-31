@@ -129,9 +129,10 @@
 
   nav a {
     text-decoration: none;
-    color: $white;
+    color: $yellow;
     text-transform: uppercase;
-    font-weight: 400;
+    //font-weight: 400;
+    font-size: smaller;
     opacity: 1;
     transition: opacity 250ms ease-in-out;
   }
