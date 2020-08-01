@@ -29,8 +29,8 @@ figure {
   flex-direction: column;
   width: 450px;
   position: relative;
-  //max-height: 400px;
-  height: min-content;
+  max-height: 400px;
+  //height: min-content;
   background-color: $light-blue;
   flex: 1 1 10rem;
 
@@ -79,7 +79,7 @@ figure {
 
 .project-modal {
   position: absolute;
-  z-index: 300;
+  z-index: 700;
   top: 10%;
   bottom: 10%;
   left: 10%;
@@ -189,7 +189,7 @@ figure {
   height: fit-content;
   padding: 0;
   margin: 1.5em 1.8em;
-  position: relative;
+  // position: absolute;
   display: flex;
   transition: all 0.2s ease-in-out;
 
