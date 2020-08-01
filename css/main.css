@@ -550,8 +550,8 @@ p {
   bottom: 5vh;
   color: #fff;
   opacity: 0.8;
-  -webkit-animation: 1700ms ease-in-out infinite both running bounce;
-          animation: 1700ms ease-in-out infinite both running bounce;
+  -webkit-animation: 1700ms ease-in-out infinite both running bounce alternate;
+          animation: 1700ms ease-in-out infinite both running bounce alternate;
 }
 
 @-webkit-keyframes bounce {
@@ -687,7 +687,7 @@ figure {
 }
 
 .project-modal {
-  position: fixed;
+  position: absolute;
   z-index: 300;
   top: 10%;
   bottom: 10%;
