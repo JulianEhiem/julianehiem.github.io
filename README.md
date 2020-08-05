@@ -12,7 +12,6 @@
 - [ ] fix project description broken links
 - [x] Remove NavBar Container Slide for whole page
 - [ ] add links to social media buttons
-- [ ] add Logo
 - [x] add responsiveness
 - [ ] update and attach resume
 - [x] add profile picture
