@@ -580,10 +580,6 @@ p {
   background: url(../../img/my-work-bg-image.jpg) center/cover no-repeat;
   text-align: center;
   padding: 5em 2em;
-  min-height: -webkit-max-content;
-  min-height: -moz-max-content;
-  min-height: max-content;
-  display: block;
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
@@ -610,306 +606,194 @@ p {
   }
 }
 
-figure {
-  margin: 1.5em 1.8em;
-}
-
 .project {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
+  margin: 0.7em 0.7em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 450px;
-  position: relative;
-  max-height: 400px;
-  background-color: #7f9fa0;
+  min-width: 250px;
+  background-color: #000;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 10rem;
-          flex: 1 1 10rem;
+      -ms-flex: 1 1 5rem;
+          flex: 1 1 5rem;
 }
 
 .project img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
 }
 
-.project .project-link {
-  color: #fff;
-  font-weight: 400;
-  font-size: 14px;
-  text-decoration: none;
+.project .project-cta {
+  color: #f3fc62;
+  font-size: 300;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 35px);
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.project .project-desc {
-  font-size: 14px;
-  line-height: 1.1em;
-  padding-top: 1em;
+.project:hover .project-cta {
+  -webkit-transform: translateY();
+          transform: translateY();
+  opacity: 100;
 }
 
-.project .project-title {
-  padding-top: 0.5em;
+.project:hover img {
+  -webkit-filter: brightness(20%);
+          filter: brightness(20%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.project figcaption {
-  margin: 0;
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  display: block;
-  -webkit-transition: max-height ease-in-out 250ms;
-  transition: max-height ease-in-out 250ms;
-}
-
-.project:hover figcaption,
-.project:focus figcaption {
-  -webkit-transition: max-height ease-in-out 250ms;
-  transition: max-height ease-in-out 250ms;
-  max-height: 50px;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-}
-
-.projects {
+.flexy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   width: 90%;
-  margin: 0 auto;
+  margin: 1em auto;
   max-width: 870px;
 }
 
-.project-modal {
-  position: absolute;
-  z-index: 700;
-  top: 10%;
-  bottom: 10%;
-  left: 10%;
-  right: 10%;
-  z-index: 400;
-  background: #7f9fa0;
-  -webkit-box-shadow: 0 0 0 90em rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 0 90em rgba(0, 0, 0, 0.6);
-  overflow-y: scroll;
-  overflow-x: hidden;
-  display: none;
-}
-
-.project-modal.is-open {
-  display: block;
-}
-
-@media (min-width: 569px) and (max-width: 1024px) {
-  .project-modal {
-    top: 15%;
-    bottom: 15%;
-    left: 20%;
-    right: 20%;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1600px) {
-  .project-modal {
-    top: 15%;
-    bottom: 15%;
-    left: 25%;
-    right: 25%;
-  }
-}
-
-@media (min-width: 1601px) {
-  .project-modal {
-    top: 15%;
-    bottom: 15%;
-    left: 25%;
-    right: 25%;
-  }
-}
-
-.modal-close {
-  background: white;
+.modal-container {
   position: fixed;
-  right: 8%;
-  top: 8%;
-  border: 0;
-  padding: 0;
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: 50%;
-}
-
-@media (min-width: 569px) and (max-width: 1024px) {
-  .modal-close {
-    top: 13%;
-    right: 18%;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1600px) {
-  .modal-close {
-    top: 13%;
-    right: 23%;
-  }
-}
-
-@media (min-width: 1601px) {
-  .modal-close {
-    top: 13%;
-    right: 23%;
-  }
-}
-
-.project-header {
-  text-align: center;
-  padding: 5em 0;
-  margin-bottom: 2em;
-}
-
-.project-header:nth-of-type(1) {
-  background: url("https://source.unsplash.com/random/250x250") center/cover no-repeat;
-}
-
-.project-title-box {
-  background: rgba(23, 40, 47, 0.9);
-  padding: 2em;
-  color: #fff;
-  width: 70%;
-  margin: auto;
-}
-
-.project-content {
-  text-align: left;
-  width: 85%;
-  margin: 0 auto;
-  padding-bottom: 2em;
-}
-
-.project-content img {
-  display: block;
-}
-
-.project-content .project-full-width {
-  width: 100vw;
-  max-width: initial;
-  margin: 2em calc(50% - 50vw);
-  height: 20vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.project-content .project-pull-left {
-  width: 65%;
-  float: left;
-  margin-right: 2em;
-}
-
-.project-content .project-pull-right {
-  width: 65%;
-  float: right;
-  margin-left: 2em;
-}
-
-.project {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0;
-  margin: 1.5em 1.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 900;
 }
 
-.project img {
-  display: block;
-  width: 100%;
-  background-color: #000;
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
 }
 
-.project:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.modal {
+  background-color: #fff;
+  width: 300px;
+  max-width: 100%;
+  overflow: scroll;
+  position: relative;
 }
 
-.project:hover .overlay,
-.project:focus .overlay {
-  width: 100%;
-  height: 100%;
+.modal .modal-header {
+  background: #7857d1;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.modal .modal-header img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: left;
+      align-self: left;
+}
+
+.modal .modal-header .title-info {
   position: absolute;
-  background-color: #000;
-  opacity: 0.7;
+  top: 7rem;
+  right: 0.5rem;
 }
 
-.project:hover .project-caption,
-.project:focus .project-caption {
-  -webkit-transition: max-height ease-in-out 550ms;
-  transition: max-height ease-in-out 550ms;
-  max-height: 100%;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-}
-
-.project .project-btn {
-  background: #fff;
-  color: #000;
-  font-size: 0.7em;
-  margin: 0;
-  display: inline-block;
+.modal .modal-header .title-info h2 {
+  font-size: 19px;
+  padding: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border: none;
-  padding: 4px 5px;
-  margin: 0 auto 7px;
-  white-space: nowrap;
-  text-decoration: none;
-  z-index: 500;
 }
 
-.project .project-btn:hover {
-  background: #f3fc62;
-  cursor: pointer;
+.modal .modal-header .title-info svg {
+  width: 40px;
+  height: 40px;
 }
 
-.project-caption {
-  padding: 0.1em;
-  margin: 0;
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(127, 159, 160, 0.8);
-  max-height: 0;
-  width: 100%;
-  overflow: hidden;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.modal .modal-icons {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: -10px 10px 0px auto;
 }
 
-.project-caption .project-title {
-  color: #fff;
-  font-weight: 400;
+.modal .modal-body {
+  padding: 1rem;
 }
 
-.project-caption .project-desc {
-  color: #fff;
-  font-weight: 300;
+.modal .modal-body p {
   font-size: 13px;
-  line-height: 0.9em;
-  padding-top: 1em;
+  text-align: left;
 }
 
-.project-caption .project-link {
-  color: #fff;
+.modal .modal-body ul {
+  font-size: 13px;
+  text-align: left;
+}
+
+.modal .btn {
+  border-radius: 0;
+  border: none;
+  margin: 0.5rem auto;
+}
+
+.modal #liveBtn {
+  background-color: #ffe139;
+}
+
+.modal #codeBtn {
+  background-color: #56ecf8;
+}
+
+.modal .close-btn {
   font-weight: 400;
-  font-size: 12px;
-  text-decoration: underline;
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #7857d1;
+  border: none;
+  cursor: pointer;
 }
 
 .skills {
