@@ -1,37 +1,62 @@
-// const portfolioContainer = document.querySelector(".projects");
+const heliosModal = document.querySelector("#heliosModal");
+const alfredasModal = document.querySelector("#alfredasModal");
+const cyclodenModal = document.querySelector("#cyclodenModal");
+const weatherHubModal = document.querySelector("#weatherHubModal");
+const weatherHub2Modal = document.querySelector("#weatherHub2Modal");
 
-// portfolioContainer.addEventListener("click", (e) => {
-//   //console.log(e);
-//   e.preventDefault();
+let openModal = (e) => {
+  let clickedId = e.target.id;
 
-//   const modalToggle = e.target.closest(".project-link");
-//   console.log(modalToggle);
-//   if (!modalToggle) return;
+  removeShow = () => {
+    window.onclick = function (e) {
+      if (e.target.id === `${clickedId + "Modal"}`) {
+        e.target.classList.remove("show");
+      }
+    };
+  };
 
-//   const modal = modalToggle.parentNode.nextElementSibling;
-//   const closeButton = modal.querySelector(".modal-close");
+  switch (clickedId) {
+    case "helios":
+      heliosModal.classList.add("show");
+      removeShow();
+      break;
+    case "alfredas":
+      alfredasModal.classList.add("show");
+      removeShow();
+      break;
+    case "cycloden":
+      cyclodenModal.classList.add("show");
+      removeShow();
+      break;
+    case "weatherHub":
+      weatherHubModal.classList.add("show");
+      removeShow();
+      break;
+    case "weatherHub2":
+      weatherHub2Modal.classList.add("show");
+      removeShow();
+      break;
+  }
+};
 
-//   const modalOpen = () => {
-//     modal.classList.add("is-open");
-//     document.body.style.overflowY = "hidden";
-//   };
-//   const modalClose = () => {
-//     modal.classList.remove("is-open");
-//     document.body.style.overflowY = "scroll";
-//   };
-//   closeButton.addEventListener("click", modalClose);
+let closeModal = (e) => {
+  let clickedId = e.target.id;
 
-//   modalOpen();
-// });
-
-const open = document.querySelector("#open");
-const modalContainer = document.querySelector("#modalContainer");
-const close = document.querySelector("#close");
-
-open.addEventListener("click", () => {
-  modalContainer.classList.add("show");
-});
-
-close.addEventListener("click", () => {
-  modalContainer.classList.remove("show");
-});
+  switch (clickedId) {
+    case "heliosClose":
+      heliosModal.classList.remove("show");
+      break;
+    case "alfredasClose":
+      alfredasModal.classList.remove("show");
+      break;
+    case "cyclodenClose":
+      cyclodenModal.classList.remove("show");
+      break;
+    case "weatherHubClose":
+      weatherHubModal.classList.remove("show");
+      break;
+    case "weatherHub2Close":
+      weatherHub2Modal.classList.remove("show");
+      break;
+  }
+};

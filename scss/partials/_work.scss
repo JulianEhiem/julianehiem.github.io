@@ -33,7 +33,7 @@
   background-color: #000;
   flex: 1 1 5rem;
 
-  img {
+  .project-img {
     display: block;
     max-width: 100%;
     filter: brightness(100%);
@@ -45,7 +45,7 @@
     font-size: $fw-l;
     position: absolute;
     top: 50%;
-    left: calc(50% - 35px);
+    left: calc(50% - 40px);
     opacity: 0;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -56,7 +56,7 @@
     transform: translateY();
     opacity: 100;
   }
-  &:hover img {
+  &:hover .project-img {
     filter: brightness(20%);
     transform: scale(1.1);
   }
@@ -96,17 +96,15 @@
 
 .modal {
   background-color: #fff;
-  width: 300px;
+  width: 290px;
   max-width: 100%;
-  // height: 90vh;
   overflow: scroll;
   position: relative;
 
   .modal-header {
-    background: #7857d1;
     justify-content: left;
 
-    img {
+    .modal-header-img {
       display: flex;
       align-self: left;
     }
@@ -117,21 +115,33 @@
       right: 0.5rem;
 
       h2 {
-        font-size: 19px;
+        font-size: 17px;
+        font-weight: $fw-n;
         padding: 0;
         width: fit-content;
-      }
-
-      svg {
-        width: 40px;
-        height: 40px;
       }
     }
   }
 
+  .modal-header-helios {
+    background-color: #7857d1;
+  }
+  .modal-header-alfredas {
+    background-color: #be2a2a;
+  }
+  .modal-header-cycloden {
+    background-color: #cacaca;
+  }
+  .modal-header-weatherHub {
+    background-color: #57a5d1;
+  }
+  .modal-header-weatherHub2 {
+    background-color: #57a5d1;
+  }
+
   .modal-icons {
     width: fit-content;
-    margin: -10px 10px 0px auto;
+    margin: -17px 10px 0px auto;
   }
   .modal-body {
     padding: 1rem;
@@ -165,7 +175,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #7857d1;
+    background-color: transparent;
     border: none;
     cursor: pointer;
   }
