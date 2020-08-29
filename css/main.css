@@ -612,7 +612,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin: 0.7em 0.7em;
+  margin: 0.3em 0.3em;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-box-orient: vertical;
@@ -620,6 +620,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 250px;
+  max-width: 100%;
   background-color: #000;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 5rem;
@@ -657,6 +658,7 @@ p {
   -webkit-transform: translateY();
           transform: translateY();
   opacity: 100;
+  z-index: 10;
 }
 
 .project:hover .project-img {
@@ -664,6 +666,7 @@ p {
           filter: brightness(20%);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  z-index: 9;
 }
 
 .flexy {
@@ -678,7 +681,7 @@ p {
   margin: auto;
   width: 90%;
   margin: 1em auto;
-  max-width: 870px;
+  max-width: 700px;
 }
 
 .modal-container {
@@ -1094,6 +1097,15 @@ p {
     font-size: 19px;
     padding: 0.8rem;
   }
+}
+
+.modal-header-cycloden .title-info h2,
+.modal-header-cycloden .title-info p {
+  color: #000;
+}
+
+#cyclodenModal .modal-body .close-btn {
+  color: #000;
 }
 
 .skills {

@@ -11,6 +11,7 @@ let openModal = (e) => {
     window.onclick = function (e) {
       if (e.target.id === `${clickedId + "Modal"}`) {
         e.target.classList.remove("show");
+        document.querySelector("body").style.overflow = "visible";
       }
     };
   };
@@ -18,22 +19,22 @@ let openModal = (e) => {
   switch (clickedId) {
     case "helios":
       heliosModal.classList.add("show");
+      document.querySelector("body").style.overflow = "hidden";
       removeShow();
       break;
     case "alfredas":
       alfredasModal.classList.add("show");
+      document.querySelector("body").style.overflow = "hidden";
       removeShow();
       break;
     case "cycloden":
       cyclodenModal.classList.add("show");
+      document.querySelector("body").style.overflow = "hidden";
       removeShow();
       break;
     case "weatherHub":
       weatherHubModal.classList.add("show");
-      removeShow();
-      break;
-    case "weatherHub2":
-      weatherHub2Modal.classList.add("show");
+      document.querySelector("body").style.overflow = "hidden";
       removeShow();
       break;
   }
@@ -45,18 +46,19 @@ let closeModal = (e) => {
   switch (clickedId) {
     case "heliosClose":
       heliosModal.classList.remove("show");
+      document.querySelector("body").style.overflow = "visible";
       break;
     case "alfredasClose":
       alfredasModal.classList.remove("show");
+      document.querySelector("body").style.overflow = "visible";
       break;
     case "cyclodenClose":
       cyclodenModal.classList.remove("show");
+      document.querySelector("body").style.overflow = "visible";
       break;
     case "weatherHubClose":
       weatherHubModal.classList.remove("show");
-      break;
-    case "weatherHub2Close":
-      weatherHub2Modal.classList.remove("show");
+      document.querySelector("body").style.overflow = "visible";
       break;
   }
 };
