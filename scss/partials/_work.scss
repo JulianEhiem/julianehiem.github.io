@@ -115,6 +115,12 @@
     margin: auto 75px;
     flex: 1 1 3rem;
   }
+  @include mq-xl {
+    min-width: 450px;
+    max-width: 700px;
+    margin: auto 75px;
+    flex: 1 1 3rem;
+  }
 
   .modal-header {
     justify-content: left;
@@ -122,6 +128,10 @@
 
     @include mq-l {
       height: 300px;
+    }
+    @include mq-xl {
+      height: 350px;
+      overflow: hidden;
     }
 
     .modal-header-img {
@@ -134,6 +144,10 @@
       @include mq-l {
         margin-left: 3rem;
         width: 250px;
+      }
+      @include mq-xl {
+        margin-left: 3rem;
+        width: 325px;
       }
     }
 
@@ -148,6 +162,9 @@
       @include mq-l {
         right: 4rem;
       }
+      @include mq-xl {
+        right: 5rem;
+      }
 
       h2 {
         font-size: 17px;
@@ -161,84 +178,19 @@
         @include mq-l {
           font-size: 30px;
         }
-      }
-
-      p {
-        width: 100%;
-        font-size: 12px;
-        color: #fff;
-        line-height: 0.7;
-        padding-right: 0;
-        margin-right: 0;
-
-        @include mq-m {
-          font-size: 15px;
-        }
-        @include mq-l {
-          font-size: 17px;
+        @include mq-xl {
+          font-size: 35px;
         }
       }
-    }
-  }
-
-  .modal-header-helios {
-    background-color: #7857d1;
-  }
-  .modal-header-alfredas {
-    background-color: #be2a2a;
-  }
-  .modal-header-cycloden {
-    background-color: #cacaca;
-  }
-  .modal-header-weatherHub {
-    background-color: #57a5d1;
-  }
-  .modal-header-weatherHub2 {
-    background-color: #57a5d1;
-  }
-
-  .modal-icons {
-    position: relative;
-    width: fit-content;
-    margin: -17px 0.5rem 0px auto;
-
-    @include mq-m {
-      margin: -17px 3rem 0px auto;
-    }
-    @include mq-l {
-      margin: -20px 4rem 0px auto;
-    }
-  }
-
-  .lang-icons {
-    width: 30px;
-    height: 30px;
-
-    @include mq-m {
-      width: 50px;
-      height: 50px;
-      margin-left: 5px;
-    }
-    @include mq-l {
-      width: 55px;
-      height: 55px;
-      margin-left: 5px;
-    }
-  }
-
-  .modal-body {
-    padding: 1rem;
-
-    @include mq-m {
-      padding: 3rem;
-    }
-    @include mq-l {
-      padding: 3rem;
     }
 
     p {
-      font-size: 13px;
-      text-align: left;
+      width: 100%;
+      font-size: 12px;
+      color: #fff;
+      line-height: 0.7;
+      padding-right: 0;
+      margin-right: 0;
 
       @include mq-m {
         font-size: 15px;
@@ -246,63 +198,159 @@
       @include mq-l {
         font-size: 17px;
       }
-    }
-
-    ul {
-      font-size: 13px;
-      text-align: left;
-
-      @include mq-m {
-        font-size: 15px;
-      }
-      @include mq-l {
+      @include mq-xl {
         font-size: 17px;
       }
     }
   }
-  .modal-cta {
-    margin-top: 1rem;
+}
+
+.modal-header-helios {
+  background-color: #7857d1;
+}
+.modal-header-alfredas {
+  background-color: #be2a2a;
+}
+.modal-header-cycloden {
+  background-color: #cacaca;
+}
+.modal-header-weatherHub {
+  background-color: #57a5d1;
+}
+.modal-header-weatherHub2 {
+  background-color: #57a5d1;
+}
+
+.modal-icons {
+  position: relative;
+  width: fit-content;
+  margin: -17px 0.5rem 0px auto;
+
+  @include mq-m {
+    margin: -17px 3rem 0px auto;
+  }
+  @include mq-l {
+    margin: -20px 4rem 0px auto;
+  }
+  @include mq-xl {
+    margin: -20px 4rem 0px auto;
+  }
+}
+
+.lang-icons {
+  width: 30px;
+  height: 30px;
+
+  @include mq-m {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+  }
+  @include mq-l {
+    width: 55px;
+    height: 55px;
+    margin-left: 5px;
+  }
+  @include mq-xl {
+    width: 55px;
+    height: 55px;
+    margin-left: 5px;
+  }
+}
+
+.modal-body {
+  padding: 1rem;
+
+  @include mq-m {
+    padding: 3rem;
+  }
+  @include mq-l {
+    padding: 3rem;
+  }
+  @include mq-xl {
+    padding: 3rem;
   }
 
-  .btn {
-    border-radius: 0;
-    border: none;
-    margin: 0.5rem 0.5rem;
+  p {
+    font-size: 13px;
+    text-align: left;
 
     @include mq-m {
-      padding: 0.7rem;
-      margin: 0.7rem 0.7rem;
+      font-size: 15px;
     }
     @include mq-l {
-      padding: 0.7rem;
-      margin: 0.7rem 0.7rem;
-    }
-  }
-  #liveBtn {
-    background-color: #ffe139;
-  }
-  #codeBtn {
-    background-color: #56ecf8;
-  }
-  .close-btn {
-    font-weight: $fw-n;
-    font-size: 15px;
-    color: #fff;
-    position: absolute;
-    top: 0.8rem;
-    right: 0.8rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-
-    @include mq-m {
       font-size: 17px;
-      padding: 0.8rem;
+    }
+    @include mq-xl {
+      font-size: 17px;
+    }
+  }
+
+  ul {
+    font-size: 13px;
+    text-align: left;
+
+    @include mq-m {
+      font-size: 15px;
     }
     @include mq-l {
-      font-size: 19px;
-      padding: 0.8rem;
+      font-size: 17px;
     }
+    @include mq-xl {
+      font-size: 17px;
+    }
+  }
+}
+.modal-cta {
+  margin-top: 1rem;
+}
+
+.btn {
+  border-radius: 0;
+  border: none;
+  margin: 0.5rem 0.5rem;
+
+  @include mq-m {
+    padding: 0.7rem;
+    margin: 0.7rem 0.7rem;
+  }
+  @include mq-l {
+    padding: 0.7rem;
+    margin: 0.7rem 0.7rem;
+  }
+  @include mq-xl {
+    padding: 0.7rem;
+    margin: 0.7rem 0.7rem;
+  }
+}
+#liveBtn {
+  background-color: #ffe139;
+}
+#codeBtn {
+  background-color: #56ecf8;
+}
+.close-btn {
+  font-weight: $fw-n;
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include mq-m {
+    font-size: 17px;
+    padding: 0.8rem;
+  }
+  @include mq-l {
+    font-size: 19px;
+    padding: 0.8rem;
+  }
+  @include mq-xl {
+    font-size: 19px;
+    padding: 0.8rem;
   }
 }
 

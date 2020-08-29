@@ -744,6 +744,17 @@ p {
   }
 }
 
+@media (min-width: 1601px) {
+  .modal {
+    min-width: 450px;
+    max-width: 700px;
+    margin: auto 75px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 3rem;
+            flex: 1 1 3rem;
+  }
+}
+
 .modal .modal-header {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
@@ -754,6 +765,13 @@ p {
 @media (min-width: 1025px) and (max-width: 1600px) {
   .modal .modal-header {
     height: 300px;
+  }
+}
+
+@media (min-width: 1601px) {
+  .modal .modal-header {
+    height: 350px;
+    overflow: hidden;
   }
 }
 
@@ -778,6 +796,13 @@ p {
   }
 }
 
+@media (min-width: 1601px) {
+  .modal .modal-header .modal-header-img {
+    margin-left: 3rem;
+    width: 325px;
+  }
+}
+
 .modal .modal-header .title-info {
   position: absolute;
   top: calc(50% - 20px);
@@ -793,6 +818,12 @@ p {
 @media (min-width: 1025px) and (max-width: 1600px) {
   .modal .modal-header .title-info {
     right: 4rem;
+  }
+}
+
+@media (min-width: 1601px) {
+  .modal .modal-header .title-info {
+    right: 5rem;
   }
 }
 
@@ -817,7 +848,13 @@ p {
   }
 }
 
-.modal .modal-header .title-info p {
+@media (min-width: 1601px) {
+  .modal .modal-header .title-info h2 {
+    font-size: 35px;
+  }
+}
+
+.modal .modal-header p {
   width: 100%;
   font-size: 12px;
   color: #fff;
@@ -827,38 +864,44 @@ p {
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .modal-header .title-info p {
+  .modal .modal-header p {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .modal-header .title-info p {
+  .modal .modal-header p {
     font-size: 17px;
   }
 }
 
-.modal .modal-header-helios {
+@media (min-width: 1601px) {
+  .modal .modal-header p {
+    font-size: 17px;
+  }
+}
+
+.modal-header-helios {
   background-color: #7857d1;
 }
 
-.modal .modal-header-alfredas {
+.modal-header-alfredas {
   background-color: #be2a2a;
 }
 
-.modal .modal-header-cycloden {
+.modal-header-cycloden {
   background-color: #cacaca;
 }
 
-.modal .modal-header-weatherHub {
+.modal-header-weatherHub {
   background-color: #57a5d1;
 }
 
-.modal .modal-header-weatherHub2 {
+.modal-header-weatherHub2 {
   background-color: #57a5d1;
 }
 
-.modal .modal-icons {
+.modal-icons {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -867,24 +910,30 @@ p {
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .modal-icons {
+  .modal-icons {
     margin: -17px 3rem 0px auto;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .modal-icons {
+  .modal-icons {
     margin: -20px 4rem 0px auto;
   }
 }
 
-.modal .lang-icons {
+@media (min-width: 1601px) {
+  .modal-icons {
+    margin: -20px 4rem 0px auto;
+  }
+}
+
+.lang-icons {
   width: 30px;
   height: 30px;
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .lang-icons {
+  .lang-icons {
     width: 50px;
     height: 50px;
     margin-left: 5px;
@@ -892,96 +941,129 @@ p {
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .lang-icons {
+  .lang-icons {
     width: 55px;
     height: 55px;
     margin-left: 5px;
   }
 }
 
-.modal .modal-body {
+@media (min-width: 1601px) {
+  .lang-icons {
+    width: 55px;
+    height: 55px;
+    margin-left: 5px;
+  }
+}
+
+.modal-body {
   padding: 1rem;
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .modal-body {
+  .modal-body {
     padding: 3rem;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .modal-body {
+  .modal-body {
     padding: 3rem;
   }
 }
 
-.modal .modal-body p {
+@media (min-width: 1601px) {
+  .modal-body {
+    padding: 3rem;
+  }
+}
+
+.modal-body p {
   font-size: 13px;
   text-align: left;
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .modal-body p {
+  .modal-body p {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .modal-body p {
+  .modal-body p {
     font-size: 17px;
   }
 }
 
-.modal .modal-body ul {
+@media (min-width: 1601px) {
+  .modal-body p {
+    font-size: 17px;
+  }
+}
+
+.modal-body ul {
   font-size: 13px;
   text-align: left;
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .modal-body ul {
+  .modal-body ul {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .modal-body ul {
+  .modal-body ul {
     font-size: 17px;
   }
 }
 
-.modal .modal-cta {
+@media (min-width: 1601px) {
+  .modal-body ul {
+    font-size: 17px;
+  }
+}
+
+.modal-cta {
   margin-top: 1rem;
 }
 
-.modal .btn {
+.btn {
   border-radius: 0;
   border: none;
   margin: 0.5rem 0.5rem;
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .btn {
+  .btn {
     padding: 0.7rem;
     margin: 0.7rem 0.7rem;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .btn {
+  .btn {
     padding: 0.7rem;
     margin: 0.7rem 0.7rem;
   }
 }
 
-.modal #liveBtn {
+@media (min-width: 1601px) {
+  .btn {
+    padding: 0.7rem;
+    margin: 0.7rem 0.7rem;
+  }
+}
+
+#liveBtn {
   background-color: #ffe139;
 }
 
-.modal #codeBtn {
+#codeBtn {
   background-color: #56ecf8;
 }
 
-.modal .close-btn {
+.close-btn {
   font-weight: 400;
   font-size: 15px;
   color: #fff;
@@ -994,14 +1076,21 @@ p {
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
-  .modal .close-btn {
+  .close-btn {
     font-size: 17px;
     padding: 0.8rem;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  .modal .close-btn {
+  .close-btn {
+    font-size: 19px;
+    padding: 0.8rem;
+  }
+}
+
+@media (min-width: 1601px) {
+  .close-btn {
     font-size: 19px;
     padding: 0.8rem;
   }
