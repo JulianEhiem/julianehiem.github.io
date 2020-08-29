@@ -709,16 +709,52 @@ p {
 
 .modal {
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 290px;
   max-width: 100%;
   overflow: scroll;
   position: relative;
 }
 
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal {
+    min-width: 375px;
+    max-width: 500px;
+    margin: auto 75px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 3rem;
+            flex: 1 1 3rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal {
+    min-width: 450px;
+    max-width: 600px;
+    margin: auto 75px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 3rem;
+            flex: 1 1 3rem;
+  }
+}
+
 .modal .modal-header {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  position: relative;
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-header {
+    height: 300px;
+  }
 }
 
 .modal .modal-header .modal-header-img {
@@ -729,10 +765,35 @@ p {
       align-self: left;
 }
 
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-header .modal-header-img {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-header .modal-header-img {
+    margin-left: 3rem;
+    width: 250px;
+  }
+}
+
 .modal .modal-header .title-info {
   position: absolute;
-  top: 7rem;
+  top: calc(50% - 20px);
   right: 0.5rem;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-header .title-info {
+    right: 3rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-header .title-info {
+    right: 4rem;
+  }
 }
 
 .modal .modal-header .title-info h2 {
@@ -742,6 +803,39 @@ p {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-header .title-info h2 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-header .title-info h2 {
+    font-size: 30px;
+  }
+}
+
+.modal .modal-header .title-info p {
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  line-height: 0.7;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-header .title-info p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-header .title-info p {
+    font-size: 17px;
+  }
 }
 
 .modal .modal-header-helios {
@@ -765,14 +859,60 @@ p {
 }
 
 .modal .modal-icons {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: -17px 10px 0px auto;
+  margin: -17px 0.5rem 0px auto;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-icons {
+    margin: -17px 3rem 0px auto;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-icons {
+    margin: -20px 4rem 0px auto;
+  }
+}
+
+.modal .lang-icons {
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .lang-icons {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .lang-icons {
+    width: 55px;
+    height: 55px;
+    margin-left: 5px;
+  }
 }
 
 .modal .modal-body {
   padding: 1rem;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-body {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-body {
+    padding: 3rem;
+  }
 }
 
 .modal .modal-body p {
@@ -780,15 +920,57 @@ p {
   text-align: left;
 }
 
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-body p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-body p {
+    font-size: 17px;
+  }
+}
+
 .modal .modal-body ul {
   font-size: 13px;
   text-align: left;
 }
 
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .modal-body ul {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .modal-body ul {
+    font-size: 17px;
+  }
+}
+
+.modal .modal-cta {
+  margin-top: 1rem;
+}
+
 .modal .btn {
   border-radius: 0;
   border: none;
-  margin: 0.5rem auto;
+  margin: 0.5rem 0.5rem;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .btn {
+    padding: 0.7rem;
+    margin: 0.7rem 0.7rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .btn {
+    padding: 0.7rem;
+    margin: 0.7rem 0.7rem;
+  }
 }
 
 .modal #liveBtn {
@@ -804,11 +986,25 @@ p {
   font-size: 15px;
   color: #fff;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.8rem;
+  right: 0.8rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: 569px) and (max-width: 1024px) {
+  .modal .close-btn {
+    font-size: 17px;
+    padding: 0.8rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .modal .close-btn {
+    font-size: 19px;
+    padding: 0.8rem;
+  }
 }
 
 .skills {
