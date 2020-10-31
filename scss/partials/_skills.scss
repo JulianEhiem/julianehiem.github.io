@@ -158,7 +158,11 @@
 }
 .resume-download {
   display: block;
-  margin-top: 2em;
+  margin-top: 3.5em;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .btn {
   background: $yellow;

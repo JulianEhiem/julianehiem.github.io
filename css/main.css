@@ -1332,7 +1332,12 @@ p {
 
 .resume-download {
   display: block;
-  margin-top: 2em;
+  margin-top: 3.5em;
+}
+
+.resume-download:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .btn {
@@ -1559,8 +1564,8 @@ footer {
 .about .image-me img {
   display: block;
   width: 120%;
-  margin-left: -13px;
-  margin-top: -8px;
+  margin-left: -18px;
+  margin-top: -20px;
 }
 
 @media (min-width: 569px) and (max-width: 1024px) {
@@ -1575,6 +1580,7 @@ footer {
   padding: 0.5em;
   line-height: 1.4em;
   max-width: 500px;
+  text-align: justify;
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
