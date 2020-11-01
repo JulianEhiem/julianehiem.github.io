@@ -47,7 +47,7 @@
       display: block;
       width: 120%;
       margin-left: -18px;
-      margin-top: -20px;
+      margin-top: -15px;
 
       @include mq-m {
         margin-left: -20px;
@@ -61,6 +61,7 @@
     line-height: 1.4em;
     max-width: 500px;
     text-align: justify;
+    margin-bottom: 2rem;
 
     @include mq-l {
       font-size: 1.1em;

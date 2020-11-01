@@ -139,9 +139,11 @@
     .modal-header-img {
       display: flex;
       align-self: left;
+      width: 180px;
 
       @include mq-m {
         margin-left: 1rem;
+        width: 200px;
       }
       @include mq-l {
         margin-left: 3rem;
@@ -155,21 +157,24 @@
 
     .title-info {
       position: absolute;
-      top: calc(50% - 20px);
-      right: 0.5rem;
+      top: calc(55% - 20px);
+      right: 0.25rem;
 
       @include mq-m {
+        top: calc(50% - 20px);
         right: 3rem;
       }
       @include mq-l {
+        top: calc(50% - 20px);
         right: 4rem;
       }
       @include mq-xl {
+        top: calc(50% - 20px);
         right: 5rem;
       }
 
       h2 {
-        font-size: 17px;
+        font-size: 0.95rem;
         font-weight: $fw-n;
         padding: 0;
         width: fit-content;
